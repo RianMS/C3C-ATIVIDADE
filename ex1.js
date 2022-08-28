@@ -24,6 +24,46 @@ function triangulos() {
     }
 }
 
+/*Questão 02 - Bhaskara
+        Uma das vantagens da programação é a automatização de tarefas que não gostamos de realizar. Dito isto, elabore
+        um método em JS cujo objetivo é resolver a fórmula de Bhaskara.*/
+
+        function calcBhaskara(){
+
+            const campo6 = document.querySelector('#campo6')
+            const campo7 = document.querySelector('#campo7')
+            const campo8 = document.querySelector('#campo8')
+        
+            let a = campo6.value;
+            let b = campo7.value;
+            let c = campo8.value;
+        
+            console.log(a+' '+b+' '+c)
+        
+        
+            let retorno4 = document.querySelector('#retorno4')
+        
+            let doubleB = b * b;
+            let delta = doubleB -4 * a * c;
+            if (delta < 0) {
+                return retorno4.innerHTML= "Delta é negativo"
+                
+            }
+            let notB = b * (-1); 
+            console.log(delta)
+        
+            let rDelta = Math.sqrt(delta); 
+        
+            let divisor = 2 * a;
+        
+        
+            let xLinha1 = (notB + rDelta) / divisor; 
+        
+            let xLinha2 = (notB - rDelta) / divisor;
+            
+           return retorno4.innerHTML= [xLinha1, xLinha2]
+        }
+
 
 /*Questão 03 - Sistema de Notas
 Construa um código JS que receba uma valor através de um input para um sistema de notas de uma instituição que possui a seguinte política de classificação: */
@@ -74,46 +114,4 @@ function calcLuidyMoura() {
         }
     }
     retorno.innerHTML = arrayy
-}
-
-
-
-
-
-function calcBhaskara(){
-
-    const campo6 = document.querySelector('#campo6')
-    const campo7 = document.querySelector('#campo7')
-    const campo8 = document.querySelector('#campo8')
-
-    let a = campo6.value;
-    let b = campo7.value;
-    let c = campo8.value;
-
-    let retorno4 = document.querySelector('#retorno4')
-
-    let doubleB = b * b;
-    let delta = doubleB -4 * a * c;
-    if (delta < 0) {
-        
-        
-        retorno4.innerHTML= "Delta é negativo"
-    }
-    let notB = b * (-1); 
-
-    let rDelta = Math.sqrt(delta); 
-
-    let divisor = 2 * a;
-
-    let xLinha1 = (notB + rDelta) / divisor; 
-
-    let xLinha2 = (notB - rDelta) / divisor;
-
-    console.log(xLinha1)
-    console.log(xLinha2)
-    
-    
-    retorno4.innerHTML= [xLinha1, xLinha2]
-    
-
 }
